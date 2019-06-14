@@ -24,7 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
@@ -48,15 +47,6 @@ Partial Class Form1
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Label1"
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(41, 68)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 24
-        Me.Button3.Text = "Read"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(41, 126)
@@ -69,7 +59,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(207, 44)
+        Me.Label2.Location = New System.Drawing.Point(139, 126)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 12)
         Me.Label2.TabIndex = 26
@@ -82,7 +72,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(356, 240)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
@@ -93,7 +82,6 @@ Partial Class Form1
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
 

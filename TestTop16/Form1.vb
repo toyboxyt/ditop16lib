@@ -8,10 +8,9 @@ Public Class Form1
     End Sub
 
     Private Sub Button4_Click(sender As System.Object, e As System.EventArgs) Handles Button4.Click
-
+        Dim id As Integer = 0
+        tdio.GetDigitalInput(id)
+        Label2.Text = id
     End Sub
 
-    Private Sub Button3_Click(sender As System.Object, e As System.EventArgs) Handles Button3.Click
-
-    End Sub
 End Class

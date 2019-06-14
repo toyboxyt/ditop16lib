@@ -40,17 +40,26 @@
 
         Dim stat As Int32 = 0
         stat = top16.GetDigitalInputs(boardName, bits)
+        If stat = -1 Then Return False
 
         Return True
     End Function
 
     ''' <summary>
-    ''' DigitalInputを取得する
+    ''' DigitalInputをidバイト列で取得する
     ''' </summary>
-    ''' <returns>True:取得成功, False:取得失敗</returns>
+    ''' <param name="id"></param>
+    ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function GetDigitalInput(ByRef id As Integer) As Boolean
         If Not IsGettedBoardname() Then Return False
+
+        Dim bits(7) As Boolean
+        If Not GetDigitalInputs(bits) Then Return False
+
+        For i = 0 To UBound(bits)
+            id = id Or IIf(bits(i), 1, 0) << i
+        Next
 
         Return True
     End Function
@@ -73,25 +82,6 @@
         End If
     End Function
 
-
-    ' ''' <summary>
-    ' ''' 出力のオンオフ切り替え
-    ' ''' </summary>
-    ' ''' <returns>True:切り替え成功, False:切り替え失敗</returns>
-    ' ''' <remarks>動かないためコメントアウト 190614</remarks>
-    'Public Function ResetOutput() As Boolean
-    '    If Not IsGettedBoardname() Then Return False
-
-    '    Dim h As Int32 = 0
-    '    For i As Integer = 1 To 8
-    '        top16.setOutputs(h, boardName, i, 0)
-    '        If h < 0 Then
-    '            Return False
-    '        End If
-    '    Next i
-
-    '    Return True
-    'End Function
 
 
 End Class

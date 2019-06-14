@@ -41,7 +41,6 @@
             End If
         End If
 
-
     End Function
 
     Shared Function readAnalog(ByVal boardName As String, ByVal input As Int16, ByVal gain As Byte) As Int32
@@ -61,9 +60,6 @@
             End If
 
         End If
-
-
-
 
 
 
@@ -153,6 +149,5 @@
 
         Next i
 
-        getTop16BoardNames = returnValue ' 返す
     End Function
 End Class

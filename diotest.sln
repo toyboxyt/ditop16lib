@@ -5,6 +5,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestTop16", "TestTop16\Test
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DITop16Manager", "DIOtop16\DITop16Manager.vbproj", "{04464BEA-A703-47F1-9EBB-45CB7AAC85F8}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BitTest", "BitTest\BitTest.vbproj", "{6E18EE2E-4FA4-4330-B195-A448553E6E62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{04464BEA-A703-47F1-9EBB-45CB7AAC85F8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{04464BEA-A703-47F1-9EBB-45CB7AAC85F8}.Release|x64.ActiveCfg = Release|Any CPU
 		{04464BEA-A703-47F1-9EBB-45CB7AAC85F8}.Release|x86.ActiveCfg = Release|Any CPU
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Debug|x64.ActiveCfg = Debug|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Debug|x86.ActiveCfg = Debug|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Debug|x86.Build.0 = Debug|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Release|Any CPU.ActiveCfg = Release|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Release|Mixed Platforms.Build.0 = Release|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Release|x64.ActiveCfg = Release|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Release|x86.ActiveCfg = Release|x86
+		{6E18EE2E-4FA4-4330-B195-A448553E6E62}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
