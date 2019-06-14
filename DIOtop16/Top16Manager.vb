@@ -1,13 +1,13 @@
 ﻿Public Class Top16Manager
-    Private boardName As String = "" ' ボード名を保持する
+    Private name As String = "" ' ボード名
 
     ''' <summary>
     ''' ボード名が既に取得されているかどうか判定
     ''' </summary>
     ''' <returns>True:既に取得済み, False:取得していない</returns>
     ''' <remarks></remarks>
-    Private Function IsGettedBoardname() As Boolean
-        Return boardName <> ""
+    Private Function IsGetted() As Boolean
+        Return name <> ""
     End Function
 
     ''' <summary>
@@ -15,14 +15,14 @@
     ''' </summary>
     ''' <returns>ボード名を返す</returns>
     ''' <remarks>一度取得したらそのまま値を保持する</remarks>
-    Public Function GetBoardName() As String
-        If IsGettedBoardname() Then Return boardName
+    Public Function GetName() As String
+        If IsGetted() Then Return name
 
         Dim stat As Int32 = 0
         Dim deviceList(20) As String
         stat = top16.getTop16BoardNames(deviceList)
         If stat = 1 Then
-            boardName = deviceList(0)
+            name = deviceList(0)
             Return deviceList(0)
         Else
             Return ""
@@ -36,10 +36,10 @@
     ''' <returns>True:取得成功, False:取得失敗</returns>
     ''' <remarks></remarks>
     Public Function GetDigitalInputs(ByRef bits() As Boolean) As Boolean
-        If Not IsGettedBoardname() Then Return False
+        If Not IsGetted() Then Return False
 
         Dim stat As Int32 = 0
-        stat = top16.GetDigitalInputs(boardName, bits)
+        stat = top16.GetDigitalInputs(name, bits)
         If stat = -1 Then Return False
 
         Return True
@@ -52,7 +52,7 @@
     ''' <returns></returns>
     ''' <remarks></remarks>
     Public Function GetDigitalInput(ByRef id As Integer) As Boolean
-        If Not IsGettedBoardname() Then Return False
+        If Not IsGetted() Then Return False
 
         Dim bits(7) As Boolean
         If Not GetDigitalInputs(bits) Then Return False
@@ -71,10 +71,10 @@
     ''' <returns>True:切り替え成功, False:切り替え失敗</returns>
     ''' <remarks></remarks>
     Public Function SetOutput(in_input As Byte, in_SetUnSet As Byte) As Boolean
-        If Not IsGettedBoardname() Then Return False
+        If Not IsGetted() Then Return False
 
         Dim h As Int32 = 0
-        top16.setOutputs(h, boardName, in_input, in_SetUnSet)
+        top16.setOutputs(h, name, in_input, in_SetUnSet)
         If h <> 0 Then
             Return False
         Else
